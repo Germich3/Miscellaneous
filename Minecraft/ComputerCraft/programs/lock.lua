@@ -36,10 +36,10 @@ local ptime = tonumber(tArgs[4])
 local checksum = cryptex.checksum(tArgs[5], rdnum)
 
 --MAIN--
-term.setBackgroundColor(colors.gray)
-term.clear()
 modem.closeAll()
 modem.open(port)
+term.setBackgroundColor(colors.gray)
+term.clear()
 while true do
     local ev, sd, fr, rfr, msg, ds = os.pullEvent("modem_message")
     local input = cryptex.checksum(msg, rdnum)
