@@ -1,8 +1,10 @@
 --IMPORTS--
 os.loadAPI("/disk/apis/cryptex.lua")
+os.loadAPI("/disk/apis/redutils.lua")
 
 --LIMIAR PANTALLA--
-shell.run("clear")
+term.setBackgroundColor(colors.red)
+term.clear()
 
 --PARAMETROS--
 local tArgs = {...}
@@ -41,8 +43,6 @@ while true do
     local ev, sd, fr, rfr, msg, ds = os.pullEvent("modem_message")
     local input = cryptex.checksum(msg, rdnum)
     if checksum == input then 
-        redstone.setOutput(pside, true)
-        os.sleep(ptime)
-        redstone.setOutput(pside, false)
+        redutils.pulse(pside, ptime)
     end
 end
