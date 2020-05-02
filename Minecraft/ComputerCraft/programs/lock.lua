@@ -3,8 +3,7 @@ os.loadAPI("/disk/apis/cryptex.lua")
 os.loadAPI("/disk/apis/redutils.lua")
 
 --LIMIAR PANTALLA--
-term.setBackgroundColor(colors.red)
-term.clear()
+shell.run("clear")
 
 --PARAMETROS--
 local tArgs = {...}
@@ -37,6 +36,8 @@ local ptime = tonumber(tArgs[4])
 local checksum = cryptex.checksum(tArgs[5], rdnum)
 
 --MAIN--
+term.setBackgroundColor(colors.gray)
+term.clear()
 modem.closeAll()
 modem.open(port)
 while true do
