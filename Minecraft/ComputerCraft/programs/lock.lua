@@ -17,7 +17,7 @@ if #tArgs ~= 5 then
     print("")
     print("  - Parametro 1: Posicion del modem wireless")
     print("  - Parametro 2: Puerto local")
-    print("  - Parametro 3: Posicion del envio de redstone")
+    print("  - Parametro 3: Posicion de la señal de redstone")
     print("  - Parametro 4: Tiempo del pulso en segundos")
     print("  - Parametro 5: Contraseña")
     print("")
